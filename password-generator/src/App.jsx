@@ -58,24 +58,25 @@ function App() {
         label={`length: ${length}`}
         type="range"
         min= {6}
-        max={100}
+        max={30}
         value={length}
+        className="appearance-none bg-green-400 duration-200 focus:bg-orange-400 w-full h-2 rounded-lg in-range:border-green-400 "
         onChange = {(e)=> setLength(e.target.value)}
         />
-        <div className='flex justify-between items-center'>
+        <div className='flex justify-between items-center mt-3'>
         <Input
         label="Character"
         type="checkbox"
         defaultChecked = {isChar}
         onChange = {()=> {setIsChar((prev)=> !prev)}}
-        className="w-auto ml-2"
+        className="w-1/6 ml-2"
         />
         <Input
         label="Number"
         type="checkbox"
         defaultChecked = {isNumber}
         onChange = {()=> {setIsNumber((prev)=> !prev)}}
-        className="w-auto ml-2"
+        className="w-1/6 ml-2"
         />
         </div>
       </div>
